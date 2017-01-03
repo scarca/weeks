@@ -38,9 +38,8 @@ var assess = function() {
         retable(84, Math.round(.3 * 52));
     }
     else if(v == 1) {
-        retable(86, Math.round(.6*52))
+        retable(86, Math.round(.6*52));
     }
-    console.log("inRest");
     var a = new Date(document.getElementById("date").value);
     var today = new Date();
     var weeks = Math.round((today-a)/604800000);
@@ -50,7 +49,6 @@ var assess = function() {
         alert("This date is invalid");
         return false;
     }
-    console.log(row);
     //get day
     var day = weeks%52;
     curr = table.rows[row].cells[day].classList;
@@ -69,4 +67,4 @@ document.getElementById('date').onkeypress = function(e){
 document.getElementById('gobutton').onclick = assess;
 
 curr = null;
-run()
+run();
